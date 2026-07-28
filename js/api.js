@@ -327,7 +327,7 @@ export async function uploadToSignedUrl({ bucket, path, token, file }) {
   }
 }
 export function publicMediaUrl(bucket, path) {
-  return mediaStore.get(path) || 'assets/images/paw-logo.jpg';
+  return mediaStore.get(path) || 'assets/images/logo-splash.jpg';
 }
 function uploadMediaBase64({ product_id, file_base64, file_name }) {
   const path = `product-media/${uid('file')}-${file_name || 'fichier'}`;

@@ -159,18 +159,24 @@ async function openAdminPanel() {
     haptic('warning'); alert("Impossible de charger les données à jour — celles déjà affichées peuvent être incomplètes.");
   }
 
-  UI.renderBadgeLibrary(state.badges);
-  UI.fillCategorySelect(document.getElementById('npCat'), state.categories);
-  UI.fillSubcategorySelect(document.getElementById('npSub'), state.subcategories, state.categories[0]?.id);
-  document.getElementById('npCat').onchange = (e) => UI.fillSubcategorySelect(document.getElementById('npSub'), state.subcategories, e.target.value);
-  UI.fillProductSelect(document.getElementById('bnProduct'), state.products);
-  UI.renderAdminCategories(state.categories, { onDelete: handleDeleteCategory, onMove: handleMoveCategory, onIconChange: handleCategoryIconChange });
-  rerenderProducts();
-  UI.renderAdminContactLinks(state.contactLinks, handleDeleteContactLink);
-  UI.renderAdminPromoCodes(state.promoCodes, handleDeletePromoCode);
-  UI.renderAdminNotifications(state.notifications, handleDeleteNotification);
-  UI.renderAdminBanners(state.banners, { onToggleActive: handleToggleBanner, onDelete: handleDeleteBanner });
-  UI.renderAdminStocks(state.products);
+  try {
+    UI.renderBadgeLibrary(state.badges);
+    UI.fillCategorySelect(document.getElementById('npCat'), state.categories);
+    UI.fillSubcategorySelect(document.getElementById('npSub'), state.subcategories, state.categories[0]?.id);
+    document.getElementById('npCat').onchange = (e) => UI.fillSubcategorySelect(document.getElementById('npSub'), state.subcategories, e.target.value);
+    UI.fillProductSelect(document.getElementById('bnProduct'), state.products);
+    UI.renderAdminCategories(state.categories, { onDelete: handleDeleteCategory, onMove: handleMoveCategory, onIconChange: handleCategoryIconChange });
+    rerenderProducts();
+    UI.renderAdminContactLinks(state.contactLinks, handleDeleteContactLink);
+    UI.renderAdminPromoCodes(state.promoCodes, handleDeletePromoCode);
+    UI.renderAdminNotifications(state.notifications, handleDeleteNotification);
+    UI.renderAdminBanners(state.banners, { onToggleActive: handleToggleBanner, onDelete: handleDeleteBanner });
+    UI.renderAdminStocks(state.products);
+  } catch (err) {
+    // Ne bloque jamais l'ouverture du panneau : au pire un onglet reste vide,
+    // mais l'utilisateur garde toujours la main (fermeture, navigation...).
+    console.error('Erreur de rendu du panneau admin (ignorée) :', err);
+  }
   document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
   document.querySelector('.admin-tab[data-atab="dashboard"]')?.classList.add('active');

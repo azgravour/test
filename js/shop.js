@@ -63,9 +63,6 @@ export async function loadEverything() {
     UI.renderInfoContent('infoPayment', settings.payment_info);
     UI.renderInfoContent('infoShipping', settings.shipping_info);
     UI.renderInfoContent('infoFaq', settings.faq_content);
-    const summary = Products.reviewsSummary(state.reviews);
-    UI.renderReviewsSummary(summary);
-    UI.renderReviewsList(state.reviews);
     refreshHomeSections();
     UI.renderNotifList(state.notifications);
     UI.renderNotifBadge(computeUnreadNotifCount());

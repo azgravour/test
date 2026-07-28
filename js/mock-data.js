@@ -68,7 +68,7 @@ export function buildSeed() {
       description: "Pollen récolté et surgelé sous 48h pour préserver ses qualités nutritives.",
       highlights: 'Riche en protéines, Conservation optimale',
       sort_order: 0, is_hidden: false, is_featured: true, likes: 27,
-      media: [{ id: 'm4', type: 'image', url: IMG + 'paw-logo.jpg', sort_order: 0 }],
+      media: [{ id: 'm4', type: 'image', url: IMG + 'logo-splash.jpg', sort_order: 0 }],
       variants: [
         { id: 'v5', name: 'Standard', unit: '200g', price: 12.9, stock: 8, sort_order: 0, lots: [] },
       ],
@@ -79,7 +79,7 @@ export function buildSeed() {
       description: "Résine de propolis brute, récoltée à la main sur nos ruches.",
       highlights: 'Récolte manuelle, Sans additif',
       sort_order: 1, is_hidden: false, is_featured: false, likes: 11,
-      media: [{ id: 'm5', type: 'image', url: IMG + 'paw-logo.jpg', sort_order: 0 }],
+      media: [{ id: 'm5', type: 'image', url: IMG + 'logo-splash.jpg', sort_order: 0 }],
       variants: [
         { id: 'v6', name: 'Pilulier', unit: '30 pièces', price: 14.5, stock: 15, sort_order: 0, lots: [] },
       ],
@@ -90,7 +90,7 @@ export function buildSeed() {
       description: "3 miels signatures + 1 pot de pollen, présentés dans un coffret cadeau.",
       highlights: 'Idée cadeau, 4 produits inclus',
       sort_order: 0, is_hidden: false, is_featured: true, likes: 52,
-      media: [{ id: 'm6', type: 'image', url: IMG + 'logo-header.png', sort_order: 0 }],
+      media: [{ id: 'm6', type: 'image', url: IMG + 'logo-splash.jpg', sort_order: 0 }],
       variants: [
         { id: 'v7', name: 'Coffret', unit: 'pièce', price: 29.9, stock: 6, sort_order: 0, lots: [] },
       ],
@@ -103,12 +103,12 @@ export function buildSeed() {
   ];
 
   const app_settings = {
-    app_title: 'Legend Labs',
-    welcome_message: 'Bienvenue dans la démo 👋',
+    app_title: 'AZG TEST',
+    welcome_message: 'Bienvenue sur AZG TEST 👋',
     contact_link: 'https://t.me/legendlabs_demo',
-    payment_info: 'Carte bancaire et virement acceptés (démo).',
-    shipping_info: 'Livraison en 48h partout en France (démo).',
-    faq_content: "Ceci est une version de démonstration, aucune commande n'est réellement traitée.",
+    payment_info: "Cette vitrine est une démonstration : aucun paiement réel n'est traité.\n\nDans une version connectée à un vrai commerce, cette section listerait les moyens de paiement acceptés (carte bancaire, virement, paiement à la livraison...) ainsi que les éventuelles conditions (acompte, paiement en plusieurs fois, etc.).",
+    shipping_info: "Démonstration uniquement — aucune commande n'est réellement expédiée.\n\nCette section est prévue pour détailler les zones de livraison, les délais et les transporteurs utilisés, entièrement modifiable depuis le panneau admin sans toucher au code.",
+    faq_content: "Cette mini-app est une vitrine de démonstration créée par Azgravour Dev pour présenter une architecture Telegram Mini App + Supabase (authentification, panneau admin, gestion de catalogue).\n\nAucune donnée n'est réelle et aucune action admin n'est sauvegardée — un rechargement de page réinitialise le contenu.\n\nPour un projet sur mesure (site vitrine, boutique en ligne, mini-app Telegram, automatisation), contacte Azgravour Dev via les liens ci-dessus.",
     maintenance_enabled: false,
     maintenance_title: 'Maintenance en cours',
     maintenance_message: "On revient très vite, merci de ta patience !",
@@ -134,7 +134,7 @@ export function buildSeed() {
   ];
 
   const banners = [
-    { id: 'b1', image_url: IMG + 'logo-header.png', link_url: null, product_id: 'prod-coffret', sort_order: 0, is_active: true },
+    { id: 'b1', image_url: IMG + 'logo-splash.jpg', link_url: null, product_id: 'prod-coffret', sort_order: 0, is_active: true },
     { id: 'b2', image_url: IMG + 'logo-splash.jpg', link_url: null, product_id: 'prod-fleurs', sort_order: 1, is_active: true },
   ];
 

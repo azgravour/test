@@ -16,8 +16,10 @@
   var COUNT = window.innerWidth < 480 ? 26 : 46;
 
   function resize() {
-    W = canvas.clientWidth = window.innerWidth;
-    H = canvas.clientHeight = window.innerHeight;
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
     canvas.width = W * DPR;
     canvas.height = H * DPR;
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
