@@ -72,16 +72,22 @@ h1, h2, .molten, .primary-btn, .cat-pill, .admin-tab, .pcard .pname{
   filter:drop-shadow(0 0 14px rgba(212,175,55,.35));
 }
 
-/* ---------- Logos : recadrage chromatique vers l'or (en attendant ton propre logo) ---------- */
-.header-brand img, .access-lock-logo, .splash-bear, .splash-logo-overlay, .maintenance-logo img{
-  filter:grayscale(.15) sepia(.45) saturate(2.1) hue-rotate(-10deg) brightness(1.04) drop-shadow(0 0 22px rgba(212,175,55,.35));
+/* ---------- Logos : halo lumineux discret (logo déjà doré) ---------- */
+.header-brand img, .access-lock-logo, .splash-logo-overlay, .maintenance-logo img{
+  filter:drop-shadow(0 0 22px rgba(212,175,55,.4));
+}
+.splash-bear{
+  filter:brightness(.96) drop-shadow(0 0 40px rgba(212,175,55,.12));
 }
 
 /* ---------- Verre dépoli renforcé : panneaux, sheets, cartes ---------- */
-.sheet, #accessLock .access-lock-inner, .pcard, .home-card, .admin-product-card,
+#accessLock .access-lock-inner, .pcard, .home-card, .admin-product-card,
 .contact-card, .info-card, .notif-card, .dash-quick-link, .stock-row, .badge-lib-item,
 .cat-tile, .filter-group{
   position:relative;
+  border-color:rgba(212,175,55,.16) !important;
+}
+.sheet{
   border-color:rgba(212,175,55,.16) !important;
 }
 .sheet{
