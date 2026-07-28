@@ -1,0 +1,16 @@
+# ============================================================
+# En-têtes de sécurité — Cloudflare Pages lit ce fichier
+# automatiquement s'il est placé à la racine du site déployé.
+# Sans effet sur GitHub Pages (qui ne le lit pas).
+#
+# ⚠️ Volontairement, PAS de X-Frame-Options ni de frame-ancestors
+# restrictif ici : la mini-app doit pouvoir s'afficher intégrée
+# dans le client Telegram. Un réglage trop strict casserait
+# l'ouverture de l'app depuis Telegram.
+# ============================================================
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=()
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
