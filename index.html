@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://telegram.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:; connect-src 'self'; object-src 'none'; base-uri 'self';">
 <meta name="referrer" content="no-referrer">
-<title>Legend Labs — Vitrine</title>
-<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<title>AZG TEST — Vitrine</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +22,12 @@
 <canvas id="cyberGrid" aria-hidden="true"></canvas>
 <canvas id="cyberParticles" aria-hidden="true"></canvas>
 <div id="cyberScan" aria-hidden="true"></div>
-<div id="vitrineBadge" aria-hidden="true"><span class="vitrine-dot"></span>Démo vitrine — Legend Labs</div>
+<div id="vitrineBadge" aria-hidden="true"><span class="vitrine-dot"></span>Démo vitrine — AZG TEST</div>
 
 <!-- ================= VERROU MOT DE PASSE GLOBAL ================= -->
 <div id="accessLock" class="access-lock">
   <div class="access-lock-inner">
-    <img src="assets/images/logo-header.png" alt="Legend Labs" class="access-lock-logo">
+    <img src="assets/images/logo-header.png" alt="AZG TEST" class="access-lock-logo">
     <p class="access-lock-label">Accès sécurisé</p>
     <input type="password" id="accessPasswordInput" placeholder="Clé d'accès" autocomplete="off" inputmode="text">
     <button class="primary-btn" id="accessSubmitBtn">Authentifier</button>
@@ -39,7 +39,7 @@
 <!-- ================= MAINTENANCE ================= -->
 <div id="maintenanceScreen" class="maintenance-screen">
   <div class="maintenance-logo" id="maintenanceAdminTrigger">
-    <img src="assets/images/logo-small-v2.jpg" alt="Legend Lab's">
+    <img src="assets/images/logo-small-v2.jpg" alt="AZG TEST">
   </div>
   <h1 class="molten" id="maintenanceTitle">Maintenance en cours</h1>
   <p id="maintenanceMessage">On revient très vite, merci de ta patience !</p>
@@ -51,14 +51,14 @@
   <div class="splash-illustration">
     <div class="splash-glow"></div>
     <img class="splash-bear" src="assets/images/logo-splash.jpg" alt="">
-    <img class="splash-logo-overlay" src="assets/images/logo-header.png" alt="Legend Labs">
+    <img class="splash-logo-overlay" src="assets/images/logo-header.png" alt="AZG TEST">
   </div>
   <p class="splash-caption" id="splashCaption">Initialisation du système...</p>
   <div class="splash-bar"><i id="splashBarFill"></i></div>
   <p class="splash-percent" id="splashPercent">0%</p>
   <div class="splash-zone-bottom"></div>
   <div id="emberField"></div>
-  <h1 class="molten" id="splashTitle" style="display:none;">LEGEND LABS</h1>
+  <h1 class="molten" id="splashTitle" style="display:none;">AZG TEST</h1>
 </div>
 
 <!-- ================= ACCUEIL ================= -->
@@ -66,9 +66,9 @@
   <div class="top-identity-bar">
     <div class="header-spacer" aria-hidden="true"></div>
     <div class="header-brand" id="adminTrigger">
-      <img src="assets/images/logo-header.png" alt="Legend Labs">
+      <img src="assets/images/logo-header.png" alt="AZG TEST">
     </div>
-    <h1 class="molten" id="heroTitle" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);">LEGEND LABS</h1>
+    <h1 class="molten" id="heroTitle" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);">AZG TEST</h1>
     <button class="bell-btn" id="notifBell" aria-label="Notifications">
       🔔<span class="bell-badge hidden" id="notifBadge">0</span>
     </button>
@@ -129,7 +129,7 @@
 <div id="view-infos" class="view">
   <div style="padding:20px 18px 8px;">
     <span id="infosBackLink" style="display:inline-flex; align-items:center; gap:4px; color:var(--ember-2); font-size:12px; font-weight:700; cursor:pointer; margin-bottom:10px;">← <span data-i18n="tab_settings">Profil</span></span>
-    <h2 class="molten" style="font-family:'Bebas Neue'; letter-spacing:.03em; font-size:30px; margin:0 0 4px;" data-i18n="infos_title">Infos</h2>
+    <h2 class="molten" style="font-family:'Orbitron'; letter-spacing:.03em; font-size:30px; margin:0 0 4px;" data-i18n="infos_title">Infos</h2>
     <p style="color:var(--muted); font-size:13px; margin:0 0 18px;" data-i18n="infos_sub">Contact, paiement, livraison et questions fréquentes.</p>
 
     <h4 class="info-section-h" data-i18n="contact_heading">Contact</h4>
@@ -147,6 +147,19 @@
 
     <h4 class="info-section-h" data-i18n="faq_heading">Questions fréquentes</h4>
     <div class="info-card" id="infoFaq"></div>
+
+    <h4 class="info-section-h">À propos</h4>
+    <div class="info-card">AZG TEST est une vitrine de démonstration réalisée par <b>Azgravour Dev</b>, développeur freelance spécialisé dans les sites web, web apps, mini-apps Telegram et automatisations sur mesure.
+
+Cette démo reprend l'architecture complète d'un projet e-commerce réel (authentification, panneau admin, gestion de catalogue) avec un habillage graphique entièrement personnalisé — sans donnée ni backend réels.</div>
+
+    <h4 class="info-section-h">Conditions & confidentialité</h4>
+    <div class="info-card">Vitrine à usage de démonstration uniquement : aucune commande, aucun paiement et aucune donnée personnelle ne sont traités ou conservés.
+
+Les informations éventuellement saisies (mot de passe, formulaires admin...) ne sont ni envoyées ni stockées sur un serveur — tout reste dans la mémoire de ton navigateur et disparaît à la fermeture ou au rechargement de la page.</div>
+
+    <h4 class="info-section-h">Version</h4>
+    <div class="info-card">AZG TEST — Vitrine v1.0<br>Réalisée par Azgravour Dev</div>
   </div>
 </div>
 
@@ -154,7 +167,7 @@
 <!-- ================= RÉGLAGES ================= -->
 <div id="view-settings" class="view">
   <div style="padding:20px 18px 8px;">
-    <h2 class="molten" style="font-family:'Bebas Neue'; letter-spacing:.03em; font-size:30px; margin:0 0 4px;" data-i18n="settings_title">Profil</h2>
+    <h2 class="molten" style="font-family:'Orbitron'; letter-spacing:.03em; font-size:30px; margin:0 0 4px;" data-i18n="settings_title">Profil</h2>
 
     <div class="profile-header" id="profileHeader" style="display:none;">
       <div class="profile-avatar" id="profileAvatar"></div>
@@ -331,8 +344,8 @@
 
   <div class="admin-tabs">
     <div class="admin-sidebar-header">
-      <img src="assets/images/paw-logo.jpg" alt="Legend Labs">
-      <b>LEGEND LABS</b>
+      <img src="assets/images/paw-logo.jpg" alt="AZG TEST">
+      <b>AZG TEST</b>
       <span>Panneau Admin</span>
     </div>
     <button class="admin-tab active" data-atab="dashboard">📊 Dashboard</button>
